@@ -1,0 +1,41 @@
+Unix (tested on ubuntu 20.4 64bit)
+
+1.	install some needed packages to compile the code and access the repository
+		sudo apt-get update
+		sudo apt-get install -y qt5-default git libgl1-mesa-dev libglu1-mesa-dev build-essential
+
+2. 	run "qmake" on the "qblade.pro" file
+
+3. 	execute "make"
+
+4.    start qblade with: "LD_LIBRARY_PATH=./libraries/libs_unix_64bit/ ./QBladeEXE" so that the shared libraries are found!
+
+
+
+Unix (tested on ubuntu 20.4 64bit) using qtcreator
+
+1.	install some needed packages to compile the code and access the repository
+		sudo apt-get update
+		sudo apt-get install -y qt5-default git libgl1-mesa-dev libglu1-mesa-dev build-essential qtcreator
+
+2. 	open the project (*.pro) file with qtcreator - then build and run with a kit using the GCC compiler!!
+
+
+
+Running The Compiled Code on a fresh Unix System (tested on ubuntu 20.4 64bit)
+
+1.	install some libraries that are required to run qblade
+	sudo apt-get update -y
+	sudo apt-get install -y libqt5opengl5 libqt5xml5 libquadmath0
+
+2. 	start qblade by executing the shell script "./run_qblade.sh" 
+
+	should the script not be executable run "chmod +x run_qblade.sh" and try again
+
+
+
+Windows using qtcreator (tested on Windows10 64bit)
+
+1.	install Qt 5.15.1 with MinGW 8.1.0 64bit
+
+2. 	open the project (*.pro) file with qtcreator - then build with a kit using the MinGW 84bit compiler
