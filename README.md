@@ -1,5 +1,5 @@
 # qbladece_2
-This is an unofficial repository.  Visit original project at [http://www.q-blade.org/](https://qblade.org/about-qblade-software/).
+This is an unofficial repository.  Visit original project at [http://qblade.org/](https://qblade.org/about-qblade-software/).
 
 The QBlade Software
 
