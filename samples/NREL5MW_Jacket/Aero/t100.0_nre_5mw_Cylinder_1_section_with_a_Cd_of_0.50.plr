@@ -1,0 +1,20 @@
+----------------------------------------QBlade Multi RE Polar File--------------------------------------------------
+Generated with : QBlade CE v 2.0.4_alpha windows
+Archive Format: 310005
+Time : 17:49:32
+Date : 09.08.2022
+
+----------------------------------------Object Names----------------------------------------------------------------
+t100.0_nre_5mw_Polar                     POLARNAME          - the polar name
+Airfoils/t100.0_nre_5mw.afl              FOILNAME           - the airfoil name to which the polar(s) belong
+
+----------------------------------------Parameters------------------------------------------------------------------
+100.0                                    THICKNESS          - the name of the blade
+0                                        ISDECOMPOSED       - is the polar decomposed (add Cl_Sep, Cl_att and f_st columns)
+REYNOLDS            1.0000E+06          - the list of Reynolds numbers for the imported polars
+
+----------------------------------------Polar Data------------------------------------------------------------------
+AOA                 CL                  CD                  CM                  
+-180.000000         0.000000            0.500000            0.000000            
+0.000000            0.000000            0.500000            0.000000            
+180.000000          0.000000            0.500000            0.000000            

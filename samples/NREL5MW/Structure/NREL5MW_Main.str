@@ -1,0 +1,88 @@
+---------------------- QBLADE STRUCTURAL MODEL INPUT FILE -----------------
+NREL 5MW Turbine
+------------------------------- CHRONO PARAMETERS -------------------------
+0.2			GLBGEOEPS - Global geometry epsilon for node placement
+
+------------------------------- HAWT TURBINE CONFIGURATION ----------------
+2.5			PRECONE - Rotor PreCone (deg) (HAWT only)
+5			SHFTTILT - Turbine Shaft Tilt (deg) (HAWT only)
+5.0191		OVERHANG - Rotor Overhang (m) (HAWT only)
+1.96256		TWR2SHFT - Tower to Shaft distance (m) (HAWT only)
+
+------------------------------- MASS AND INERTIA --------------------------
+0.0			YAWBRMASS - Yaw Bearing Mass (kg) (HAWT only)
+240000		NACMASS - Nacelle Mass (kg) (HAWT only)
+1.9    		NACCMX - Downwind distance from the tower-top to the nacelle CM (m) (HAWT only)
+0.0      	NACCMY - Lateral  distance from the tower-top to the nacelle CM (m) (HAWT only)
+1.75   		NACCMZ - Vertical distance from the tower-top to the nacelle CM (m) (HAWT only)
+2607890		NACYINER - Nacelle Yaw Inertia (kg*m^2) (HAWT only)
+56780		HUBMASS - Hub Mass (kg)
+115926		HUBINER - Hub Inertia (kg*m^2)
+
+------------------------------- DRIVETRAIN MODEL --------------------------
+97			GBRATIO - gearbox ratio (N)
+1.0			GBOXEFF - gearbox efficiency (0-1)
+true		DRTRDOF - model drivetrain dynamics (true / false)
+534.116		GENINER	- Generator side (HSS) Inertia (kg*m^2)
+867637000	DTTORSPR - Drivetrain torsional stiffness (N*m/rad)
+6215000		DTTORDMP - Drivetrain torsional damping (N*m*s/rad)
+
+------------------------------- BRAKE MODEL -------------------------------
+0			BRKTORQUE - maximum brake torque
+0			BRKDEPLOY - brake deploy time (s) (only used with DTU style controllers)
+0			BRKDELAY - brake delay time (s) (only used with DTU style controllers)
+
+------------------------------- SENSOR ERRORS -----------------------------
+0			ERRORYAW - yaw error (deg) (HAWT only)
+0			ERRORPITCH_1 - pitch error blade1 (deg)
+0			ERRORPITCH_2 - pitch error blade2 (deg)
+0			ERRORPITCH_3 - pitch error blade3 (deg)
+
+------------------------------- BLADES ------------------------------------
+3					NUMBLD - Number of blades 
+NREL5MW_Blade.str	BLDFILE_1 - Name of file containing properties for blade 1
+NREL5MW_Blade.str	BLDFILE_2 - Name of file containing properties for blade 2
+NREL5MW_Blade.str	BLDFILE_3 - Name of file containing properties for blade 3
+
+------------------------------- TOWER -------------------------------------
+87.6				TWRHEIGHT - Height of the tower (m)
+NREL5MW_Tower.str	TWRFILE - Name of file containing properties for the tower
+
+------------------------------- DATA OUTPUT TYPES -------------------------
+true			FOR_OUT - store (local) forces at all chosen locations 
+true			ROT_OUT - store (local) body rotations at all chosen locations 
+true			MOM_OUT - store (local) moments at all chosen locations 
+true			DEF_OUT - store (local) deflections at all chosen locations 
+true			POS_OUT - store (global) positions at all chosen locations 
+true			VEL_OUT - store (global) velocities at all chosen locations 
+true			ACC_OUT - store (global) accelerations at all chosen locations
+true			LVE_OUT - store (local) velocities at all chosen locations
+true			LAC_OUT - store (local) accelerations at all chosen locations
+
+------------------------------- DATA OUTPUT LOCATIONS ---------------------
+any number, or zero, user defined positions can be chosen as output locations. locations can be assigned at any of the following components:
+blades, struts, tower and guy cables. See the following examples for the used nomenclature:
+
+BLD_1_1.0		- exemplary position, blade 1 at 100% normalized radius  
+BLD_1_0.9		- exemplary position, blade 1 at  90% normalized radius 
+BLD_1_0.8		- exemplary position, blade 1 at  80% normalized radius 
+BLD_1_0.7		- exemplary position, blade 1 at  70% normalized radius 
+BLD_1_0.6		- exemplary position, blade 1 at  60% normalized radius 
+BLD_1_0.5		- exemplary position, blade 1 at  50% normalized radius 
+BLD_1_0.4		- exemplary position, blade 1 at  40% normalized radius 
+BLD_1_0.3		- exemplary position, blade 1 at  30% normalized radius 
+BLD_1_0.2		- exemplary position, blade 1 at  20% normalized radius 
+BLD_1_0.1		- exemplary position, blade 1 at  10% normalized radius 
+BLD_1_0.0		- exemplary position, blade 1 at  00% normalized radius 
+
+TWR_1.00		- exemplary position, tower at 100% normalized height 
+TWR_0.90		- exemplary position, tower at  90% normalized height 
+TWR_0.80		- exemplary position, tower at  80% normalized height 
+TWR_0.70		- exemplary position, tower at  70% normalized height 
+TWR_0.60		- exemplary position, tower at  60% normalized height 
+TWR_0.50		- exemplary position, tower at  50% normalized height 
+TWR_0.40		- exemplary position, tower at  40% normalized height 
+TWR_0.30		- exemplary position, tower at  30% normalized height 
+TWR_0.20		- exemplary position, tower at  20% normalized height 
+TWR_0.10		- exemplary position, tower at  10% normalized height 
+TWR_0.00		- exemplary position, tower at   0% normalized height 
